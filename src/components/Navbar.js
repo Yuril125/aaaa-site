@@ -41,7 +41,7 @@ export const Navbar = (props) => {
               float: "right",
             }}>
               <a href={linkIcon.link}>
-                <img src={"%PUBLIC_URL%" + linkIcon.icon}/>
+                <img src={linkIcon.icon} height="80px" width="80px"/>
               </a>
             </div>);
           })}

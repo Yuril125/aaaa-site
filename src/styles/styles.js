@@ -1,7 +1,7 @@
 import { rgbToHex } from "../utils/colors";
 
 export const h1 = { // Header 1
-    fontSize: 24,
+    fontSize: 36,
     fontWeight: 500,
     marginTop: 5,
     marginBottom: 5,
@@ -28,7 +28,7 @@ export const p = { // Paragraph
     fontSize: 12,
     fontWeight: 400,
     marginTop: 30,
-    marginBottom: 30,
+    marginBottom: 5,
     color: rgbToHex([20, 20, 20]),
 };
 
@@ -51,16 +51,10 @@ export const subsectionWrapper = {
     margin: 8,
 };
 
-export const imageWrapper = {
-    borderStyle: "solid 1px black", // Debug
-    margin: 5,
-    maxHeight: 360,
-};
-
-export const calendarWrapper = {
-    borderStyle: "solid 1px black", // Debug
-    margin: 5,
-    maxHeight: 640,
+export const galleryWrapper = {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around', // Adjusts spacing around items
 }
 
 export const navButtonWrapper = {
@@ -83,5 +77,31 @@ export const navIconWrapper = {
 }
 
 export const navbarWrapper = {
+    position: 'fixed',
+    top: 0,
     minHeight: 150,
+    width: "100%",
+    backgroundColor: rgbToHex([255, 255, 255]),
+    zIndex: 100,
+}
+
+export const imageWrapper = {
+    margin: '5px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+
+    maxWidth:250,
+    maxHeight:250,
+};
+
+export const imageInnerWrapper = {
+    width: 250,
+    height: 250,
+}
+
+export const calendarWrapper = {
+    borderStyle: "solid 1px black", // Debug
+    margin: 5,
+    maxHeight: 640,
 }

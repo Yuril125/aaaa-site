@@ -1,5 +1,5 @@
 import React from "react";
-import { h3, subsectionWrapper } from "../styles/styles";
+import { h3, imageWrapper, subsectionWrapper, galleryWrapper, imageInnerWrapper } from "../styles/styles";
 
 export const Gallery = (props) => {
     return (
@@ -7,11 +7,13 @@ export const Gallery = (props) => {
             <div style={h3}>
                 {props.galleryName}
             </div>
-            <div style={subsectionWrapper}>
+            <div style={{...subsectionWrapper, ...galleryWrapper}}>
                 {props.imageUrls.map((imageUrl) => {
-                    return <div>
-                        <img src={"%PUBLIC_URL%" + imageUrl}></img>
-                    </div>;
+                    return (
+                        <div style={imageWrapper}>
+                            <img src={imageUrl} style={imageInnerWrapper} alt=""></img>
+                        </div>
+                    );
                 })}
             </div>
         </div>

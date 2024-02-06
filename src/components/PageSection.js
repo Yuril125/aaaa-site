@@ -4,7 +4,7 @@ import { formatTitleToID } from "../utils/format";
 
 export const PageSection = (props) => {
     return (
-      props.title && <div id={formatTitleToID(props.title)} style={{
+       <div id={props.title ? formatTitleToID(props.title) : formatTitleToID(props.subtitle)} style={{
         width: "100%",
         margin: 10,
         padding: 5,

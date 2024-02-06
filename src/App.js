@@ -8,6 +8,14 @@ import { InteractiveMap } from './components/InteractiveMap';
 import { Navbar } from './components/Navbar';
 import { PageSection } from './components/PageSection';
 
+import sample from './assets/sample.jpg';
+
+import iconDiscord from './assets/icons/discord.png';
+import iconInstagram from './assets/icons/instagram.webp';
+import iconMailingList from './assets/icons/mail.png';
+import iconTelegram from './assets/icons/telegram.png';
+
+
 function App() {
   return (
     <div style={pageWrapper}>
@@ -19,12 +27,14 @@ function App() {
           { displayName: "Resources and Links", sectionName: "Resources and Links"},
         ]}
         linkButtons={[
-          { link: "instagram.com", icon: "/assets/icons/instagram.webp"},
-          { link: "t.me", icon: "/assets/icons/telegram.png"},
-          { link: "", icon: "/assets/icons/mail.png"},
-          { link: "", icon: "/assets/icons/discord.png"},
+          { link: "instagram.com", icon: iconInstagram},
+          { link: "t.me", icon: iconTelegram},
+          { link: "", icon: iconMailingList},
+          { link: "", icon: iconDiscord},
         ]}
       />
+
+      <div style={{minHeight: 200, minWidth: 200}}></div>
       
       <PageSection
         title={"Homepage"}
@@ -61,8 +71,8 @@ function App() {
             month={1} day={26} year={2024} beginHour={15} beginMinute={0} endHour={19} endMinute={30}
             description={"We won 73-71 go bears"}
           />
-        <Calendar calendarName={"All Events"} url={"https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&bgcolor=%23ffffff&src=am9leS5qLnpodUBnbWFpbC5jb20&src=Y2IxYjNhYTVmMjFkN2M3M2Y3OTRhZjU2ZDg0MDEwOGVhYzg1MTQyMTgxZDdmOTM5MDFkZmIwYmI4ODg5YjY4NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23E67C73&color=%234285F4"}/>
-      </PageSection>
+          <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&bgcolor=%23ffffff&src=Y2IxYjNhYTVmMjFkN2M3M2Y3OTRhZjU2ZDg0MDEwOGVhYzg1MTQyMTgxZDdmOTM5MDFkZmIwYmI4ODg5YjY4NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%234285F4" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+          </PageSection>
 
       <PageSection
         title={"Gallery"}
@@ -71,30 +81,24 @@ function App() {
       >
         <Gallery galleryName={"Group Photos"}
           imageUrls={[
-            "/assets/sample.jpg",
-            "/assets/sample.jpg",
-            "/assets/sample.jpg",
+            sample, sample, sample,
           ]}
         />
         <Gallery galleryName={"Fursuiters"}
           imageUrls={[
-            "/assets/sample.jpg",
-            "/assets/sample.jpg",
-            "/assets/sample.jpg",
+            sample, sample, sample,
+
           ]}
         />
         <Gallery galleryName={"Memes & Candids"}
           imageUrls={[
-            "/assets/sample.jpg",
-            "/assets/sample.jpg",
-            "/assets/sample.jpg",
+            sample, sample, sample,
+
           ]}
         />
         <Gallery galleryName={"Exec Board"}
           imageUrls={[
-            "/assets/sample.jpg",
-            "/assets/sample.jpg",
-            "/assets/sample.jpg",
+            sample, sample, sample,
           ]}
         />
       </PageSection>
@@ -104,8 +108,7 @@ function App() {
         subtitle={"Bottom Text"}
         content={"Here you can find a list of all our university affiliates and contact information!"}
       >
-        <Calendar calendarName={"Office Hours"} url={"https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&bgcolor=%23ffffff&src=am9leS5qLnpodUBnbWFpbC5jb20&src=Y2IxYjNhYTVmMjFkN2M3M2Y3OTRhZjU2ZDg0MDEwOGVhYzg1MTQyMTgxZDdmOTM5MDFkZmIwYmI4ODg5YjY4NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23E67C73&color=%234285F4"}/>
-        <InteractiveMap locations={[
+<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&bgcolor=%23ffffff&src=Y2IxYjNhYTVmMjFkN2M3M2Y3OTRhZjU2ZDg0MDEwOGVhYzg1MTQyMTgxZDdmOTM5MDFkZmIwYmI4ODg5YjY4NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%234285F4" width="800" height="600" frameborder="0" scrolling="no"></iframe>        <InteractiveMap locations={[
           { name: "Berkeley Furs", siteLink: "https://furries.at/berkeley", address: "University Avenue and, Oxford St, Berkeley, CA 94720"},
           { name: "UCLA Furs", siteLink: "https://furries.at/ucla", address: "405 Hilgard Avenue Box 951405 Los Angeles, CA 90095-1405"},
           { name: "Irvine Furs", siteLink: "https://furries.at/", address: "Peltason Drive, Suite 3200, Irvine, CA 92617"},
